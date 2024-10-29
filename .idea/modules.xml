@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Reservas_UQ.iml" filepath="$PROJECT_DIR$/.idea/Reservas_UQ.iml" />
+      <module fileurl="file://$PROJECT_DIR$/co.edu.uniquindio.reservasuq/co_edu_uniquindio_reservasuq.iml" filepath="$PROJECT_DIR$/co.edu.uniquindio.reservasuq/co_edu_uniquindio_reservasuq.iml" />
+    </modules>
+  </component>
+</project>

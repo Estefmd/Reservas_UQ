@@ -1,0 +1,38 @@
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="co.edu.uniquindio.reservasuq.controladores.LoginControlador"
+      prefHeight="400.0" prefWidth="400.0" alignment="center" spacing="30.0" >
+
+
+    <Label text="Panel de registro" >
+        <font>
+            <Font size="18.0" />
+        </font>
+    </Label>
+
+        <Label text="Cédula:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <TextField fx:id="txtCedula" GridPane.columnIndex="1" GridPane.rowIndex="0" minHeight="30.0" />
+
+
+        <Label text="Nombre:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <PasswordField fx:id="txtNombre" GridPane.columnIndex="1" GridPane.rowIndex="1" minHeight="30.0"/>
+
+        <Label text="Correo:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <PasswordField fx:id="txtCorreo" GridPane.columnIndex="1" GridPane.rowIndex="1" minHeight="30.0"/>
+
+        <Label text="Contraseña:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <PasswordField fx:id="pfContrasenia" GridPane.columnIndex="1" GridPane.rowIndex="1" minHeight="30.0"/>
+
+
+    
+
+    <Button text="Registro" onAction="#registro" minHeight="40.0" minWidth="130.0" />
+
+
+</VBox>
+
