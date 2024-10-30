@@ -1,12 +1,17 @@
 package co.edu.uniquindio.reservasuq.controladores;
 
 import co.edu.uniquindio.reservasuq.enums.TipoUsuario;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
-public class RegistroControlador {
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class RegistroControlador implements Initializable {
 
     @FXML
     private TextField txtCedula;
@@ -18,14 +23,16 @@ public class RegistroControlador {
     private TextField txtCorreo;
 
     @FXML
-    private ComboBox<TipoUsuario> cbTipoUsuario = new ComboBox<>();
+    private ComboBox<TipoUsuario> cbTipoUsuario;
 
     @FXML
     private PasswordField pfContrasenia;
 
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        cbTipoUsuario.getItems().addAll(TipoUsuario.values());
+    }
 
-
-
-
-
+    public void registro(ActionEvent event) {
+    }
 }

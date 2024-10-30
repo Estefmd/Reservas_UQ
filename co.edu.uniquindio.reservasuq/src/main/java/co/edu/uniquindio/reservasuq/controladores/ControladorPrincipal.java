@@ -1,9 +1,15 @@
 package co.edu.uniquindio.reservasuq.controladores;
 
 
+
 import co.edu.uniquindio.reservasuq.enums.TipoUsuario;
 import co.edu.uniquindio.reservasuq.modelo.*;
 import co.edu.uniquindio.reservasuq.servicio.ServiciosReservasUQ;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.layout.StackPane;
 
 
 import java.time.LocalDate;
@@ -58,6 +64,19 @@ public class ControladorPrincipal implements ServiciosReservasUQ {
 
     @Override
     public List<Reserva> listarReservasPorPersona(String cedulaPersona) {
+        return null;
+    }
+
+
+    private Parent cargarPanel(String fxmlFile) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlFile));
+            Parent node = loader.load();
+
+            return node;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         return null;
     }
 }
