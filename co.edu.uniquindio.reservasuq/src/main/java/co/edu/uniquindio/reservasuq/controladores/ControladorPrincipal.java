@@ -41,11 +41,12 @@ public class ControladorPrincipal implements ServiciosReservasUQ {
         return reservasUq.login(correo, contrasena);
     }
 
-
     @Override
-    public void registrarPersona(String cedula, String nombre, TipoUsuario tipoPersona, String email, String password) throws Exception {
-        reservasUq.registrarPersona(cedula, nombre, tipoPersona, email, password);
+    public void registrarPersona(String cedula, String nombre, String correo, TipoUsuario tipoUsuario, String contrasenia) throws Exception {
+
+
     }
+
 
     @Override
     public void crearInstalacion(String nombre,int aforo, float costo, List<Horario> horarios) {

@@ -15,7 +15,7 @@ public interface ServiciosReservasUQ {
     Usuario login(String correo, String contrasena) throws Exception;
 
 
-    void registrarPersona(String cedula, String nombre, TipoUsuario tipoUsuario, String email, String password) throws Exception;
+    void registrarPersona(String cedula, String nombre, String correo , TipoUsuario tipoUsuario,String contrasenia) throws Exception;
 
 
     void crearInstalacion(String nombre, int aforo, float costo, List<Horario> horarios);
