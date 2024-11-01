@@ -5,8 +5,6 @@ import lombok.Setter;
 
 
 public class Sesion {
-
-
     public static Sesion INSTANCIA;
 
     @Getter @Setter

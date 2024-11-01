@@ -42,9 +42,9 @@ public class ControladorPrincipal implements ServiciosReservasUQ {
     }
 
     @Override
-    public void registrarPersona(String cedula, String nombre, String correo, TipoUsuario tipoUsuario, String contrasenia) throws Exception {
-
-
+    public void registrarPersona(String cedula, String nombre, String correo, TipoUsuario tipoUsuario,
+                                 String contrasenia) throws Exception {
+        reservasUq.registrarPersona(cedula, nombre, correo,tipoUsuario,contrasenia);
     }
 
 
@@ -53,31 +53,22 @@ public class ControladorPrincipal implements ServiciosReservasUQ {
         reservasUq.crearInstalacion(nombre, aforo, costo, horarios);
     }
 
+
+
     @Override
     public Reserva crearReserva(String idInstalacion, String cedulaPersona, LocalDate diaReserva, String horaReserva) throws Exception {
-        return null;
+        return reservasUq.crearReserva(idInstalacion,cedulaPersona,diaReserva,horaReserva);
     }
 
     @Override
     public List<Reserva> listarTodasReservas() {
-        return null;
+        return reservasUq.listarTodasReservas();
     }
 
     @Override
     public List<Reserva> listarReservasPorPersona(String cedulaPersona) {
-        return null;
+        return reservasUq.listarReservasPorPersona(cedulaPersona);
     }
 
 
-    private Parent cargarPanel(String fxmlFile) {
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlFile));
-            Parent node = loader.load();
-
-            return node;
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return null;
-    }
 }

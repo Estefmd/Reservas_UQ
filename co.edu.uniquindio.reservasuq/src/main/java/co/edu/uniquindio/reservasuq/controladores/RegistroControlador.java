@@ -28,11 +28,21 @@ public class RegistroControlador implements Initializable {
     @FXML
     private PasswordField pfContrasenia;
 
+    private ControladorPrincipal controladorPrincipal;
+
+    public RegistroControlador(){
+        this.controladorPrincipal = ControladorPrincipal.getInstancia();
+    }
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         cbTipoUsuario.getItems().addAll(TipoUsuario.values());
     }
 
-    public void registro(ActionEvent event) {
+    public void crearRegistro(){
+
+        String nombre = txtnombre.getText();
+
+        //controladorPrincipal.registrarPersona(nombre);
     }
 }

@@ -12,4 +12,5 @@ public class Usuario {
     private String nombre;
     private String correo;
     private TipoUsuario tipoUsuario;
+    private String contrasenia;
 }
