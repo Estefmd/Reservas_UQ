@@ -105,6 +105,11 @@ public class ReservasUq implements ServiciosReservasUQ {
     @Override
     public void cancelarReserva(String idReserva) throws Exception {
 
+        for (Reserva reserva : getListaReservas()) {
+            if (reserva.getId().equals(idReserva)) {
+                listaReservas.remove(reserva);
+            }
+        }
     }
 
 

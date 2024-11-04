@@ -1,10 +1,7 @@
 package co.edu.uniquindio.reservasuq.controladores;
 
 import co.edu.uniquindio.reservasuq.enums.TipoUsuario;
-import co.edu.uniquindio.reservasuq.modelo.Instalacion;
-import co.edu.uniquindio.reservasuq.modelo.Reserva;
-import co.edu.uniquindio.reservasuq.modelo.Sesion;
-import co.edu.uniquindio.reservasuq.modelo.Usuario;
+import co.edu.uniquindio.reservasuq.modelo.*;
 import co.edu.uniquindio.reservasuq.utils.AlertaUtil;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -44,25 +41,13 @@ public class ReservaControaldor implements Initializable {
         try {
             controladorPrincipal.crearReserva(instalacion.getId(),usuario.getCedula(),fecha,hora);
         } catch (Exception e) {
-            AlertaUtil.mostrarAlerta("ZCSD", Alert.AlertType.ERROR);
+            AlertaUtil.mostrarAlerta("No fue posible realizar la reserva", Alert.AlertType.ERROR);
 
         }
     }
 
-
-    public void cancelarReserva(){
-
-    }
-
-
-
-
-
-
-
-
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        //cbInstalacion.getItems().addAll(Instalacion);
+        //cbInstalacion.getItems().addAll();
     }
 }
