@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="478.0" prefWidth="579.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.reservasuq.controladores.PerfilUsuarioControlador">
+   <children>
+      <Label layoutX="227.0" layoutY="10.0" prefHeight="43.0" prefWidth="171.0" text="Mi perfil" textFill="#59dd66">
+         <font>
+            <Font name="Arial" size="37.0" />
+         </font>
+         <effect>
+            <Blend />
+         </effect>
+      </Label>
+      <TableView fx:id="tablaReservas" layoutX="14.0" layoutY="173.0" prefHeight="288.0" prefWidth="553.0">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="147.0" text="Id" />
+          <TableColumn fx:id="colFecha" prefWidth="177.0" text="Fecha" />
+            <TableColumn fx:id="colInstalacion" prefWidth="228.0" text="Instalación" />
+        </columns>
+         <effect>
+            <DropShadow />
+         </effect>
+      </TableView>
+      <Label fx:id="labelNombreUsu" layoutX="122.0" layoutY="53.0" prefHeight="31.0" prefWidth="121.0" text="Nombre Usuario">
+         <effect>
+            <Blend />
+         </effect>
+      </Label>
+      <Label fx:id="labelTipoUsu" layoutX="337.0" layoutY="53.0" prefHeight="31.0" prefWidth="121.0" text="Tipo de usuario">
+         <effect>
+            <Blend />
+         </effect>
+      </Label>
+      <Button fx:id="btnCerrarSesion" layoutX="460.0" layoutY="129.0" mnemonicParsing="false" onAction="#cerrarSesion" text="Cerrar sesión">
+         <effect>
+            <DropShadow color="#3349a8" />
+         </effect>
+      </Button>
+      <Button fx:id="btnCrearReserva" layoutX="14.0" layoutY="129.0" mnemonicParsing="false" onAction="#crearReserva" text="Crear reserva">
+         <effect>
+            <DropShadow color="#38a44d" />
+         </effect>
+      </Button>
+      <Button fx:id="btnCancelarReserva" layoutX="136.0" layoutY="129.0" mnemonicParsing="false" onAction="#cancelarReserva" text="Cancelar reserva">
+         <effect>
+            <DropShadow color="#72e16a" />
+         </effect>
+      </Button>
+   </children>
+   <effect>
+      <DropShadow />
+   </effect>
+</AnchorPane>

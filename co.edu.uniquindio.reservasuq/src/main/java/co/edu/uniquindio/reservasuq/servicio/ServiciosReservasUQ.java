@@ -15,14 +15,16 @@ public interface ServiciosReservasUQ {
     Usuario login(String correo, String contrasena) throws Exception;
 
 
-    void registrarPersona(String cedula, String nombre, String correo , TipoUsuario tipoUsuario,String contrasenia) throws Exception;
+    void registrarUsuario(String cedula, String nombre, String correo , TipoUsuario tipoUsuario,String contrasenia) throws Exception;
 
+    Usuario buscarUsuario(String cedula) throws Exception;
 
     void crearInstalacion(String nombre, int aforo, float costo, List<Horario> horarios);
 
 
     Reserva crearReserva(String idInstalacion, String cedulaPersona, LocalDate diaReserva, String horaReserva) throws Exception;
 
+    void cancelarReserva(String idReserva) throws Exception;
 
     List<Reserva> listarTodasReservas();
 

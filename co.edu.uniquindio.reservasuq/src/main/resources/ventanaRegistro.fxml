@@ -6,16 +6,12 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.Blend?>
 <?import javafx.scene.effect.DropShadow?>
-<?import javafx.scene.effect.Light.Distant?>
 <?import javafx.scene.effect.Lighting?>
 <?import javafx.scene.effect.Shadow?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="464.0" prefWidth="427.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
-
-
-
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="464.0" prefWidth="427.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.reservasuq.controladores.RegistroUsuarioControlador">
    <children>
 
       <Label layoutX="35.0" layoutY="-8.0" prefHeight="79.0" prefWidth="392.0" text="Registrate para realizar tu reserva" textFill="#24a128">
@@ -26,32 +22,32 @@
             <Blend />
          </effect></Label>
       <Label layoutX="117.0" layoutY="145.0" />
-      <TextField layoutX="40.0" layoutY="105.0" prefHeight="31.0" prefWidth="261.0" promptText="Cédula ">
+      <TextField fx:id="txtCedula" layoutX="40.0" layoutY="105.0" prefHeight="31.0" prefWidth="261.0" promptText="Cédula ">
          <effect>
             <DropShadow />
          </effect>
       </TextField>
-      <TextField layoutX="40.0" layoutY="166.0" prefHeight="31.0" prefWidth="261.0" promptText="Nombre">
+      <TextField fx:id="txtNombre" layoutX="40.0" layoutY="166.0" prefHeight="31.0" prefWidth="261.0" promptText="Nombre">
          <effect>
             <DropShadow />
          </effect>
       </TextField>
-      <TextField layoutX="40.0" layoutY="219.0" prefHeight="31.0" prefWidth="261.0" promptText="Correo">
+      <TextField fx:id="txtCorreo" layoutX="40.0" layoutY="219.0" prefHeight="31.0" prefWidth="261.0" promptText="Correo">
          <effect>
             <DropShadow />
          </effect>
       </TextField>
-      <TextField layoutX="40.0" layoutY="334.0" prefHeight="31.0" prefWidth="261.0" promptText="Contraseña">
+      <TextField fx:id="txtContrasenia" layoutX="40.0" layoutY="334.0" prefHeight="31.0" prefWidth="261.0" promptText="Contraseña">
          <effect>
             <DropShadow />
          </effect>
       </TextField>
-      <ComboBox layoutX="40.0" layoutY="277.0" prefHeight="31.0" prefWidth="261.0" promptText="Tipo de usuario">
+      <ComboBox fx:id="cbTipoUsuario" layoutX="40.0" layoutY="277.0" prefHeight="31.0" prefWidth="261.0" promptText="Tipo de usuario">
          <effect>
             <DropShadow />
          </effect>
       </ComboBox>
-      <Button layoutX="125.0" layoutY="387.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="158.0" text="Registrarse">
+      <Button layoutX="125.0" layoutY="387.0" mnemonicParsing="false" onAction="#registrarUsuario" prefHeight="40.0" prefWidth="158.0" text="Registrarse">
          <font>
             <Font size="20.0" />
          </font>
@@ -60,9 +56,6 @@
                <bumpInput>
                   <Shadow />
                </bumpInput>
-               <light>
-                  <Light.Distant color="#4dff40" />
-               </light>
             </Lighting>
          </effect>
       </Button>
