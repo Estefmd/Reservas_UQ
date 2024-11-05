@@ -2,16 +2,14 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.Blend?>
 <?import javafx.scene.effect.DropShadow?>
-<?import javafx.scene.effect.Light.Distant?>
 <?import javafx.scene.effect.Lighting?>
 <?import javafx.scene.effect.Shadow?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<?import javafx.scene.control.TextField?>
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="364.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.reservasuq.controladores.LoginControlador">
    <children>
       <Label layoutX="66.0" layoutY="35.0" prefHeight="65.0" prefWidth="270.0" text="Iniciar sesión reservasUq" textFill="#19bc34">
@@ -22,17 +20,29 @@
             <Blend />
          </effect>
       </Label>
-      <TextField layoutX="79.0" layoutY="125.0" prefHeight="31.0" prefWidth="243.0" promptText="Correo" fx:id="txtCorreo">
+      <TextField fx:id="txtCorreo" layoutX="79.0" layoutY="125.0" prefHeight="31.0" prefWidth="243.0" promptText="Correo">
          <effect>
             <DropShadow />
          </effect>
       </TextField>
-      <TextField layoutX="79.0" layoutY="182.0" prefHeight="31.0" prefWidth="243.0" promptText="Contraseña" fx:id="txtPassword">
+      <TextField fx:id="txtPassword" layoutX="79.0" layoutY="182.0" prefHeight="31.0" prefWidth="243.0" promptText="Contraseña">
          <effect>
             <DropShadow />
          </effect>
       </TextField>
-      <Button blendMode="HARD_LIGHT" graphicTextGap="0.0" layoutX="79.0" layoutY="264.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="164.0" onAction="#login" text="Iniciar sesión" textOverrun="CLIP">
+      <Button blendMode="HARD_LIGHT" graphicTextGap="0.0" layoutX="119.0" layoutY="234.0" mnemonicParsing="false" onAction="#login" prefHeight="27.0" prefWidth="164.0" text="Iniciar sesión" textOverrun="CLIP">
+         <font>
+            <Font size="21.0" />
+         </font>
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+            </Lighting>
+         </effect>
+      </Button>
+      <Button  blendMode="HARD_LIGHT" graphicTextGap="0.0" layoutX="119.0" layoutY="296.0" mnemonicParsing="false" onAction="#irVistaRegistrarse" prefHeight="27.0" prefWidth="164.0" text="Registrarse" textOverrun="CLIP">
          <font>
             <Font size="21.0" />
          </font>

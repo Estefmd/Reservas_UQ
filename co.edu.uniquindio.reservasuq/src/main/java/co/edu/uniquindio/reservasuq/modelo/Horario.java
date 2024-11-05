@@ -5,8 +5,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDate;
 import java.time.LocalTime;
-
 
 @Data
 @AllArgsConstructor
@@ -14,8 +14,17 @@ import java.time.LocalTime;
 @Builder
 public class Horario {
 
-    private String diaSemana;
+    private LocalDate fecha;
     private LocalTime horaInicio;
     private LocalTime horaFin;
 
+    public Horario(LocalTime horaInicio, LocalTime horaFin) {
+        this.horaInicio = horaInicio;
+        this.horaFin = horaFin;
+    }
+
+    @Override
+    public String toString() {
+        return horaInicio + "-" + horaFin;
+    }
 }

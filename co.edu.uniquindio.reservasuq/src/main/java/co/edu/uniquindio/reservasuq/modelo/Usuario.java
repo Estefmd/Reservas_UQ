@@ -13,4 +13,12 @@ public class Usuario {
     private String correo;
     private TipoUsuario tipoUsuario;
     private String contrasenia;
+
+    @Override
+    public String toString() {
+        return "CC." + cedula + '\n' +
+                "Nombre: " + nombre + '\n' +
+                "Correo: " + correo + '\n' +
+                "Tipo de usuario: " + tipoUsuario;
+    }
 }
