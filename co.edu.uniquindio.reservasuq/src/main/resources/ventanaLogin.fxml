@@ -5,29 +5,30 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.Blend?>
 <?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Light.Distant?>
 <?import javafx.scene.effect.Lighting?>
 <?import javafx.scene.effect.Shadow?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="364.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.reservasuq.controladores.LoginControlador">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="364.0" prefWidth="432.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.reservasuq.controladores.LoginControlador">
    <children>
-      <Label layoutX="66.0" layoutY="35.0" prefHeight="65.0" prefWidth="270.0" text="Iniciar sesión reservasUq" textFill="#19bc34">
+      <Label layoutX="63.0" layoutY="14.0" prefHeight="65.0" prefWidth="320.0" text="Iniciar sesión reservasUq" textFill="#19bc34">
          <font>
-            <Font name="Arial" size="24.0" />
+            <Font name="Arial Bold" size="26.0" />
          </font>
          <effect>
             <Blend />
          </effect>
       </Label>
-      <TextField fx:id="txtCorreo" layoutX="79.0" layoutY="125.0" prefHeight="31.0" prefWidth="243.0" promptText="Correo">
+      <TextField fx:id="txtCorreo" layoutX="79.0" layoutY="118.0" prefHeight="38.0" prefWidth="262.0" promptText="Correo">
          <effect>
-            <DropShadow />
+            <Blend />
          </effect>
       </TextField>
-      <TextField fx:id="txtPassword" layoutX="79.0" layoutY="182.0" prefHeight="31.0" prefWidth="243.0" promptText="Contraseña">
+      <TextField fx:id="txtPassword" layoutX="79.0" layoutY="175.0" prefHeight="38.0" prefWidth="262.0" promptText="Contraseña">
          <effect>
-            <DropShadow />
+            <Blend />
          </effect>
       </TextField>
       <Button blendMode="HARD_LIGHT" graphicTextGap="0.0" layoutX="119.0" layoutY="234.0" mnemonicParsing="false" onAction="#login" prefHeight="27.0" prefWidth="164.0" text="Iniciar sesión" textOverrun="CLIP">
@@ -39,10 +40,13 @@
                <bumpInput>
                   <Shadow />
                </bumpInput>
+               <light>
+                  <Light.Distant color="#3c9ad0" />
+               </light>
             </Lighting>
          </effect>
       </Button>
-      <Button  blendMode="HARD_LIGHT" graphicTextGap="0.0" layoutX="119.0" layoutY="296.0" mnemonicParsing="false" onAction="#irVistaRegistrarse" prefHeight="27.0" prefWidth="164.0" text="Registrarse" textOverrun="CLIP">
+      <Button blendMode="HARD_LIGHT" graphicTextGap="0.0" layoutX="119.0" layoutY="296.0" mnemonicParsing="false" onAction="#irVistaRegistrarse" prefHeight="27.0" prefWidth="164.0" text="Registrarse" textOverrun="CLIP">
          <font>
             <Font size="21.0" />
          </font>
@@ -51,6 +55,9 @@
                <bumpInput>
                   <Shadow />
                </bumpInput>
+               <light>
+                  <Light.Distant color="#19b538" />
+               </light>
             </Lighting>
          </effect>
       </Button>

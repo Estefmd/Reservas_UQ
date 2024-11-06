@@ -6,14 +6,17 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.effect.Blend?>
 <?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="478.0" prefWidth="579.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.reservasuq.controladores.VentanaUsuarioControlador">
    <children>
-      <Label layoutX="227.0" layoutY="10.0" prefHeight="43.0" prefWidth="171.0" text="Mi perfil" textFill="#59dd66">
+      <Label layoutX="227.0" layoutY="10.0" prefHeight="43.0" prefWidth="171.0" text="Mi perfil" textFill="#30ab3b">
          <font>
-            <Font name="Arial" size="37.0" />
+            <Font name="Arial Bold" size="37.0" />
          </font>
          <effect>
             <Blend />
@@ -29,24 +32,38 @@
             <DropShadow />
          </effect>
       </TableView>
-      <Label fx:id="labelNombre" layoutX="122.0" layoutY="53.0" prefHeight="31.0" prefWidth="121.0" text="Nombre Usuario">
+      <Label fx:id="labelNombre" layoutX="91.0" layoutY="53.0" prefHeight="31.0" prefWidth="121.0" text="Nombre Usuario">
          <effect>
             <Blend />
          </effect>
       </Label>
-      <Label fx:id="labelTipoUsuario" layoutX="337.0" layoutY="53.0" prefHeight="31.0" prefWidth="121.0" text="Tipo de usuario">
+      <Label fx:id="labelTipoUsuario" layoutX="381.0" layoutY="53.0" prefHeight="31.0" prefWidth="121.0" text="Tipo de usuario">
          <effect>
             <Blend />
          </effect>
       </Label>
       <Button fx:id="btnCerrarSesion" layoutX="460.0" layoutY="129.0" mnemonicParsing="false" onAction="#cerrarSesion" text="Cerrar sesión">
          <effect>
-            <DropShadow color="#3349a8" />
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
          </effect>
       </Button>
       <Button fx:id="btnCrearReserva" layoutX="14.0" layoutY="129.0" mnemonicParsing="false" onAction="#irVistaReserva" text="Crear reserva">
          <effect>
-            <DropShadow color="#38a44d" />
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant color="#4ef261" />
+               </light>
+            </Lighting>
          </effect>
       </Button>
       <Button fx:id="btnCrearReserva1" layoutX="136.0" layoutY="129.0" mnemonicParsing="false" onAction="#irVistaReserva" text="Cancelar reserva">
@@ -56,7 +73,7 @@
       </Button>
        <Button fx:id="btnCancelarReserva" layoutX="136.0" layoutY="129.0" mnemonicParsing="false" onAction="#cancelarReserva" text="Cancelar reserva">
        <effect>
-          <DropShadow color="#72e16a" />
+            <DropShadow />
        </effect>
     </Button>
    </children>

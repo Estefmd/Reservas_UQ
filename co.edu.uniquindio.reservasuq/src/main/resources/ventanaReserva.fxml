@@ -3,23 +3,30 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.effect.Blend?>
 <?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Light.Distant?>
 <?import javafx.scene.effect.Lighting?>
 <?import javafx.scene.effect.Shadow?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane prefHeight="359.0" prefWidth="364.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.reservasuq.controladores.ReservaControlador">
    <children>
-      <ComboBox fx:id="cbInstalacion" id="cbInstalacion" layoutX="67.0" layoutY="45.0" prefHeight="31.0" prefWidth="230.0" promptText="Instalación" />
+      <ComboBox id="cbInstalacion" fx:id="cbInstalacion" layoutX="67.0" layoutY="45.0" prefHeight="31.0" prefWidth="230.0" promptText="Instalación">
+         <effect>
+            <Blend />
+         </effect></ComboBox>
       <DatePicker fx:id="dpFecha" layoutX="67.0" layoutY="115.0" prefHeight="31.0" prefWidth="230.0" promptText="Fecha" />
       <ComboBox fx:id="cbHora" layoutX="67.0" layoutY="188.0" prefHeight="31.0" prefWidth="230.0" promptText="Hora inicio" />
-      <Button onAction="#crearReserva" layoutX="118.0" layoutY="269.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="118.0" text="Crear reserva">
+      <Button layoutX="118.0" layoutY="269.0" mnemonicParsing="false" onAction="#crearReserva" prefHeight="39.0" prefWidth="118.0" text="Crear reserva">
          <effect>
             <Lighting>
                <bumpInput>
                   <Shadow />
                </bumpInput>
+               <light>
+                  <Light.Distant color="#59e871" />
+               </light>
             </Lighting>
          </effect>
       </Button>

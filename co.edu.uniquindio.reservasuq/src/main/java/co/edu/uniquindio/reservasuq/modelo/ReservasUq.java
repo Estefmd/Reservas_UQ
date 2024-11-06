@@ -71,7 +71,6 @@ public class ReservasUq implements ServiciosReservasUQ {
 
     @Override
     public void crearInstalacion(String nombre, int aforo, float costo, List<Horario> horarios) {
-        //TODO: Faltan agregar las validación
 
         List<Horario> horariosCopia = new ArrayList<>(horarios);
         Instalacion instalacion = new Instalacion.InstalacionBuilder()
@@ -184,6 +183,23 @@ public class ReservasUq implements ServiciosReservasUQ {
         return horarios;
     }
 
+    public int contarReservas(String instalacionId, LocalDate fechaSeleccionada, LocalTime hora){
+
+        int contador = 0;
+
+        for(Reserva reserva : listaReservas){
+            if( reserva.getInstalacion().getId().equals(instalacionId)
+                    && reserva.getHora().getFecha().equals(fechaSeleccionada)
+                    && reserva.getHora().getHoraInicio().equals(hora)
+            ){
+                contador ++;
+            }
+        }
+
+        return contador;
+
+    }
+
     public List<Horario> obtenerHorarioDisponiblePorFecha(String instalacionId, LocalDate fechaSeleccionada) throws Exception {
         Instalacion instalacion = buscarInstalacion(instalacionId);
         if (instalacion == null) {
@@ -194,7 +210,11 @@ public class ReservasUq implements ServiciosReservasUQ {
         for (Reserva reserva : getListaReservas()) {
             if (reserva.getInstalacion().getId().equals(instalacionId)) {
                 if (reserva.getHora().getFecha().isEqual(fechaSeleccionada)) {
-                    horarios.remove(reserva.getHora());
+                    for(Horario horario: instalacion.getHorariosInstalacion()){
+                        if( contarReservas(instalacionId, fechaSeleccionada, horario.getHoraInicio()) > instalacion.getCuposInstalacion()-1 ){
+                            horarios.remove(horario);
+                        }
+                    }
                 }
             }
         }

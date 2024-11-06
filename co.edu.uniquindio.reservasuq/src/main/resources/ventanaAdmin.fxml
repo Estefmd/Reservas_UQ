@@ -4,23 +4,30 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.Blend?>
 <?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="537.0" prefWidth="618.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.reservasuq.controladores.VentanaAdminControlador">
    <children>
-      <Label layoutX="239.0" layoutY="27.0" text="Mi perfil" textFill="#1f4db9">
+      <Label layoutX="225.0" layoutY="14.0" text="Mi perfil" textFill="#24899a">
          <font>
-            <Font name="System Bold" size="35.0" />
+            <Font name="Arial Bold" size="44.0" />
          </font>
+         <effect>
+            <Blend />
+         </effect>
       </Label>
-      <Label fx:id="labelNombre" layoutX="148.0" layoutY="89.0" text="Nombre">
+      <Label fx:id="labelNombre" layoutX="136.0" layoutY="76.0" text="Nombre">
          <font>
             <Font name="System Bold" size="17.0" />
          </font>
       </Label>
-      <Label fx:id="labelTipoUsuario" layoutX="380.0" layoutY="89.0" text="Tipo de usuario">
+      <Label fx:id="labelTipoUsuario" layoutX="404.0" layoutY="76.0" text="Tipo de usuario">
          <font>
             <Font name="System Bold" size="17.0" />
          </font>
@@ -34,22 +41,33 @@
             <TableColumn fx:id="colPrecio" prefWidth="109.0" text="Precio" />
         </columns>
          <effect>
-            <DropShadow />
+            <Blend />
          </effect>
       </TableView>
       <Button layoutX="23.0" layoutY="149.0" mnemonicParsing="false" onAction="#irVistaInstalacion" prefHeight="31.0" prefWidth="133.0" text="Crear instalación">
          <effect>
-            <DropShadow />
+            <Lighting bumpInput="$null">
+               <light>
+                  <Light.Distant color="#58d2e8" />
+               </light>
+            </Lighting>
          </effect>
       </Button>
       <Button layoutX="181.0" layoutY="149.0" mnemonicParsing="false" onAction="#eliminarInstalacion" prefHeight="31.0" prefWidth="152.0" text="Eliminar instalación">
          <effect>
-            <DropShadow />
+            <Blend />
          </effect>
       </Button>
       <Button fx:id="btnCerrarSesion" layoutX="443.0" layoutY="149.0" mnemonicParsing="false" onAction="#cerrarSesion" prefHeight="31.0" prefWidth="152.0" text="Cerrar sesón">
          <effect>
-            <DropShadow />
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
          </effect>
       </Button>
    </children>

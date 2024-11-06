@@ -1,18 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.Blend?>
 <?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="410.0" prefWidth="609.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.reservasuq.controladores.InstalacionControlador">
    <children>
-      <Label layoutX="166.0" layoutY="24.0" text="Crear instalación" textFill="#33943b">
+      <Label layoutX="166.0" layoutY="24.0" text="Crear instalación" textFill="#23b22d">
          <font>
             <Font name="Arial Bold" size="37.0" />
          </font>
@@ -22,27 +24,34 @@
       </Label>
       <TextField fx:id="txtNombre" layoutX="39.0" layoutY="115.0" prefHeight="31.0" prefWidth="234.0" promptText="Nombre">
          <effect>
-            <DropShadow />
+            <Blend />
          </effect>
       </TextField>
       <TextField fx:id="txtCupo" layoutX="39.0" layoutY="174.0" prefHeight="31.0" prefWidth="234.0" promptText="Cupo">
          <effect>
-            <DropShadow />
+            <Blend />
          </effect>
       </TextField>
       <TextField fx:id="txtPrecio" layoutX="39.0" layoutY="284.0" prefHeight="31.0" prefWidth="234.0" promptText="Precio">
          <effect>
-            <DropShadow />
+            <Blend />
          </effect>
       </TextField>
       <Button layoutX="39.0" layoutY="353.0" mnemonicParsing="false" onAction="#crearInstalacion" prefHeight="31.0" prefWidth="119.0" text="Crear">
          <effect>
-            <DropShadow color="#608d43" />
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant color="#54ff6d" />
+               </light>
+            </Lighting>
          </effect>
       </Button>
       <ListView fx:id="listViewHorario" layoutX="316.0" layoutY="109.0" prefHeight="209.0" prefWidth="268.0">
          <effect>
-            <DropShadow />
+            <Blend />
          </effect>
       </ListView>
    </children>

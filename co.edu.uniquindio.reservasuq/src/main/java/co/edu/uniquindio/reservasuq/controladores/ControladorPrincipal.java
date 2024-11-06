@@ -5,7 +5,6 @@ import co.edu.uniquindio.reservasuq.modelo.*;
 import co.edu.uniquindio.reservasuq.observador.Observador;
 import co.edu.uniquindio.reservasuq.observador.VentanaObservable;
 import co.edu.uniquindio.reservasuq.servicio.ServiciosReservasUQ;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
