@@ -1,13 +1,11 @@
 package co.edu.uniquindio.reservasuq.controladores;
 
-import co.edu.uniquindio.reservasuq.modelo.Horario;
 import co.edu.uniquindio.reservasuq.modelo.Instalacion;
 import co.edu.uniquindio.reservasuq.modelo.Sesion;
 import co.edu.uniquindio.reservasuq.modelo.Usuario;
 import co.edu.uniquindio.reservasuq.observador.Observador;
 import co.edu.uniquindio.reservasuq.utils.AlertaUtil;
 import javafx.beans.property.SimpleStringProperty;
-import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -18,7 +16,6 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
-import javafx.util.Callback;
 
 import java.net.URL;
 import java.util.ArrayList;
